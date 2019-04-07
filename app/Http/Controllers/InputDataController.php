@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Gmopx\LaravelOWM\LaravelOWM;
 
 class InputDataController extends Controller
 {
@@ -11,74 +12,26 @@ class InputDataController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $input = $request->city;
 
+        $lowm = new LaravelOWM();
+        $location = $lowm->getCurrentWeather($input);
+
+        return response()->json($location);
+
+        // $country = $location->city->country;
+        // $city = $location->city->name;
+        // $latitude = $location->city->lat;
+        // $longtitude = $location->city->lon;
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+    
+    public function getCoordinates(Request $request){
+       $coordinates = json_decode(json_encode($this->index($request)))->original->city;
+        
+       $lat = $coordinates->lat;
+       $lon = $coordinates->lon;
+       return $lat . ' && ' . $lon;
     }
 }
