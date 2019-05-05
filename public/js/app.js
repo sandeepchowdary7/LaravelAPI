@@ -1783,33 +1783,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      form: {
-        name: '',
-        city: '',
-        email: ''
-      },
-      show: true
+      data: {}
     };
   },
   methods: {
-    submit: function submit() {
+    fetchData: function fetchData() {
       var _this = this;
 
       this.errors = {};
-      axios.post('/input', this.form).then(function (response) {
-        return _this.info = response;
-      })["catch"](function (error) {
+      axios.post('/input').then(function (response) {
+        return _this.data = response.data;
+      } //    response => (this.city = console.log(response.data))
+      )["catch"](function (error) {
         if (error.response.status === 422) {
           _this.errors = error.response.data.errors || {};
         }
-      });
-    },
-    resetForm: function resetForm() {
-      var self = this; //you need this because *this* will refer to Object.keys below`
-      //Iterate through each object field, key is name of the object field`
-
-      Object.keys(this.form).forEach(function (key, index) {
-        self.form[key] = '';
       });
     }
   }
@@ -83446,30 +83434,27 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("section", { staticClass: "hero" }, [
-        _c("div", { staticClass: "hero-body" }, [
-          _c("div", { staticClass: "container" }, [
-            _c("h1", { staticClass: "title" }, [
-              _vm._v("\n              Hero title\n          ")
-            ]),
-            _vm._v(" "),
-            _c("h2", { staticClass: "subtitle" }, [
-              _vm._v("\n              Hero subtitle\n          ")
-            ])
+  return _c("div", { staticClass: "container" }, [
+    _c("section", { staticClass: "hero" }, [
+      _c("div", { staticClass: "hero-body" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("h1", { staticClass: "title" }, [
+            _vm._v(
+              "\n              City Name: " +
+                _vm._s(_vm.data.city) +
+                "\n          "
+            )
+          ]),
+          _vm._v(" "),
+          _c("h2", { staticClass: "subtitle" }, [
+            _vm._v("\n              Hero subtitle\n          ")
           ])
         ])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -83661,7 +83646,19 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "field is-grouped" }, [
-              _vm._m(2),
+              _c("div", { staticClass: "control" }, [
+                _c("input", {
+                  staticClass: "button is-link is-success",
+                  attrs: { type: "submit", value: "Submit" },
+                  on: {
+                    click: function($event) {
+                      $event.stopPropagation()
+                      $event.preventDefault()
+                      return _vm.submit()
+                    }
+                  }
+                })
+              ]),
               _vm._v(" "),
               _c("div", { staticClass: "control" }, [
                 _c("input", {
@@ -83695,17 +83692,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "icon is-small is-left" }, [
       _c("i", { staticClass: "fas fa-envelope" })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "control" }, [
-      _c("input", {
-        staticClass: "button is-link is-success",
-        attrs: { type: "submit", value: "Submit" }
-      })
     ])
   }
 ]

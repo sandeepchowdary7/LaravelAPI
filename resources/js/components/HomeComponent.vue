@@ -30,7 +30,7 @@
 
       <div class="field is-grouped">
         <div class="control">
-          <input type="submit" class="button is-link is-success" value="Submit">
+          <input type="submit" @click.stop.prevent="submit()" class="button is-link is-success" value="Submit">
         </div>
         <div class="control">
           <input type="button" class="button is-danger" @click="resetForm()" value="Cancel">

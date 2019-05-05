@@ -24,4 +24,5 @@ Route::get('/example', function () {
 
 // Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/input', 'InputDataController@index')->name('input');
+Route::get('/city', 'InputDataController@index');
 // Route::get('/coordinates', 'InputDataController@getCoordinates')->name('coordinates');
