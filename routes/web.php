@@ -15,8 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::get('/example', function () {
+    return view('welcome');
+});
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/input', 'InputDataController@index')->name('input');
-Route::get('/coordinates', 'InputDataController@getCoordinates')->name('coordinates');
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/input', 'InputDataController@index')->name('input');
+// Route::get('/coordinates', 'InputDataController@getCoordinates')->name('coordinates');

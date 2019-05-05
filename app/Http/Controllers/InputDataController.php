@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Gmopx\LaravelOWM\LaravelOWM;
+use Illuminate\Support\Facades\Input;
 
 class InputDataController extends Controller
 {
@@ -19,7 +20,7 @@ class InputDataController extends Controller
         $lowm = new LaravelOWM();
         $location = $lowm->getCurrentWeather($input);
 
-        return response()->json($location);
+        return response()->json(['status' => 'success', 'data' => $location], 200);
 
         // $country = $location->city->country;
         // $city = $location->city->name;
