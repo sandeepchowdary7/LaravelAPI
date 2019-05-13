@@ -41,9 +41,12 @@
 </template>
 
 <script>
+import store from '../store.js'
+
   export default {
     data() {
       return {
+        students: {},
         form: {
           name: '',
           city: '',
@@ -55,11 +58,15 @@
     methods: {
       submit() {
        this.errors = {};
+       var self = this;
        axios.post('/input', this.form).then(response => {
+            this.students = response.data.data;
           if(response.status === 200) {
-               this.$router.push({ path : '/city' });
+            self.$store.state.users.push(self.students)
+            self.$router.push({ path : '/city' });
             }
-      }).catch(error => {
+      }).
+      catch(error => {
         if (error.response.status === 422) {
           this.errors = error.response.data.errors || {};
         }

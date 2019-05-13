@@ -12,9 +12,13 @@ import  VueProgressBar from 'vue-progressbar';
 import  swal from 'sweetalert2';
 Vue.component('pagination', require('laravel-vue-pagination'));
 import Vue from 'vue'
+import Vuex from 'vuex'
 import BootstrapVue from 'bootstrap-vue'
+import { store } from './store'
 
+Vue.use(Vuex)
 Vue.use(BootstrapVue)
+Vue.prototype.$eventBus = new Vue() // add this line of code
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -61,7 +65,8 @@ let routes = [
 ];
 
 const router = new VueRouter({
-    routes
+    routes,
+    mode: 'history'
 })
 
 Vue.filter('capitalize', function(text) {
@@ -84,5 +89,6 @@ Vue.filter('myDate', function(created){
 
 const app = new Vue({
     el: '#app',
+    store:store,
     router
 });
