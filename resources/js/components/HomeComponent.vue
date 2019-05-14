@@ -1,42 +1,50 @@
 <template>
   <div class="container">
-    <form @submit.prevent="submit" v-if="show">
-      <div class="field">
-        <label class="label">Name</label>
-        <div class="control">
-          <input class="input" required type="text" placeholder="Enter Name"  v-model="form.name">
+    <section class="hero is-12 is-success is-fullheight">
+        <div class="hero-body is-12">
+            <div class="container is-12 has-text-centered">
+                <div class="column is-8 is-offset-2">
+                    <h3 class="title has-text-grey">Welcome</h3>
+                    <p class="subtitle has-text-grey">Please Enter the details to proceed.</p>
+                    <div class="box">
+                        <figure class="avatar">
+                            <!-- <img src="../../../public/images/php-pool.png" style="width:100px;height:80px;"> -->
+                        </figure>
+                        <form @submit.prevent="submit" v-if="show">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input required is-large" type="text" placeholder="City Name" v-model="form.city" value="" autofocus="">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input is-large" type="text" placeholder="Your Name" v-model="form.name">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input is-large" type="email" placeholder="Your Email" v-model="form.email" value="">
+                                </div>
+                            </div>
+                            <!-- <div class="field">
+                                <label class="checkbox">
+                                  <input type="checkbox">
+                                  Remember me
+                                </label>
+                            </div> -->
+                             <div class="field is-grouped">
+                              <input type="submit" @click.stop.prevent="submit()" class="button is-block is-info is-large is-fullwidth" value="Submit">
+                              <input type="button" class="button is-block is-large is-fullwidth is-danger" @click="resetForm()" value="Cancel">
+                             </div>
+                        </form>
+                    </div>
+                    <p class="has-text-grey">
+                        <a href="#">Need Help?</a>
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="field">
-        <label class="label">City</label>
-        <div class="control has-icons-left has-icons-right">
-          <input class="input required content-box" type="text" placeholder="Enter City Name" v-model="form.city" value="">
-          <span class="icon is-small is-left">
-            <i class="fas fa-user"></i>
-          </span>
-        </div>
-      </div>
-
-      <div class="field">
-        <label class="label">Email</label>
-        <div class="control has-icons-left has-icons-right">
-          <input class="input" required type="email" placeholder="Enter Email" v-model="form.email" value="">
-          <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
-          </span>
-        </div>
-      </div>
-
-      <div class="field is-grouped">
-        <div class="control">
-          <input type="submit" @click.stop.prevent="submit()" class="button is-link is-success" value="Submit">
-        </div>
-        <div class="control">
-          <input type="button" class="button is-danger" @click="resetForm()" value="Cancel">
-        </div>
-      </div>
-    </form>
+    </section>
   </div>
 </template>
 
