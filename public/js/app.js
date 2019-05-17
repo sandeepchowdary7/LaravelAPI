@@ -90702,7 +90702,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("section", { staticClass: "hero is-12 is-success is-fullheight" }, [
+    _c("section", { staticClass: "hero is-12 is-light is-fullheight" }, [
       _c("div", { staticClass: "hero-body is-12" }, [
         _c("div", { staticClass: "container is-12 has-text-centered" }, [
           _c("div", { staticClass: "column is-8 is-offset-2" }, [

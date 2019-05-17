@@ -1,0 +1,10 @@
+.navbar {
+    position: fixed;
+    bottom: 870px;
+    height: 80px;
+    width: 100%;
+  }
+  .footer {
+    position: center;
+    padding-bottom: 25px;
+  }

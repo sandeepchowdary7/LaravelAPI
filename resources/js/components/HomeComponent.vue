@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <section class="hero is-12 is-success is-fullheight">
+    <section class="hero is-12 is-light is-fullheight">
         <div class="hero-body is-12">
             <div class="container is-12 has-text-centered">
                 <div class="column is-8 is-offset-2">
