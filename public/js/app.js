@@ -1950,45 +1950,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -90160,28 +90121,35 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("section", { staticClass: "hero is-info is-medium is-bold" }, [
-      _vm._m(0),
-      _vm._v(" "),
       _c("div", { staticClass: "hero-body" }, [
         _c("div", { staticClass: "container has-text-centered" }, [
           _c("h1", { staticClass: "title" }, [
             _vm._v(
-              "\n              " + _vm._s(_vm.results.city) + "\n              "
+              "\n                  " +
+                _vm._s(_vm.results.city.name) +
+                "\n              "
             )
           ]),
           _vm._v(" "),
           _c("h2", { staticClass: "subtitle" }, [
             _vm._v(
-              "\n              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n              "
-            )
+              "\n                  " +
+                _vm._s(_vm.results.weather.description) +
+                " "
+            ),
+            _c("br"),
+            _vm._v(" "),
+            _c("img", {
+              attrs: { src: "http://openweathermap.org/img/w/01d.png" }
+            })
           ])
         ])
       ])
     ]),
     _vm._v(" "),
-    _vm._m(1),
+    _vm._m(0),
     _vm._v(" "),
-    _vm._m(2)
+    _vm._m(1)
   ])
 }
 var staticRenderFns = [
@@ -90189,98 +90157,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "hero-head" }, [
-      _c("nav", { staticClass: "navbar" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "navbar-brand" }, [
-            _c("a", { staticClass: "navbar-item", attrs: { href: "../" } }, [
-              _c("img", {
-                attrs: {
-                  src: "http://bulma.io/images/bulma-type-white.png",
-                  alt: "Logo"
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "navbar-burger burger",
-                attrs: { "data-target": "navbarMenu" }
-              },
-              [_c("span"), _vm._v(" "), _c("span"), _vm._v(" "), _c("span")]
-            )
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "navbar-menu", attrs: { id: "navbarMenu" } },
-            [
-              _c("div", { staticClass: "navbar-end" }, [
-                _c("div", { staticClass: "tabs is-right" }, [
-                  _c("ul", [
-                    _c("li", { staticClass: "is-active" }, [
-                      _c("a", [_vm._v("Home")])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "" } }, [_vm._v("Examples")])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "" } }, [_vm._v("Features")])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "" } }, [_vm._v("Team")])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "" } }, [_vm._v("Help")])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "navbar-item" }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "button is-white is-outlined",
-                        attrs: {
-                          href:
-                            "https://github.com/dansup/bulma-templates/blob/master/templates/hero.html"
-                        }
-                      },
-                      [
-                        _c("span", { staticClass: "icon" }, [
-                          _c("i", { staticClass: "fa fa-github" })
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          { attrs: { title: "Hello from the other side" } },
-                          [_vm._v("View Source")]
-                        )
-                      ]
-                    )
-                  ])
-                ])
-              ])
-            ]
-          )
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "box cta" }, [
       _c("p", { staticClass: "has-text-centered" }, [
-        _c("span", { staticClass: "tag is-primary" }, [_vm._v("New")]),
-        _vm._v(
-          " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n        "
-        )
+        _c("span", { staticClass: "tag is-primary" }, [_vm._v("Note")]),
+        _vm._v(" Thanks For Visiting us.\n      ")
       ])
     ])
   },
@@ -90298,13 +90178,9 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "card-content" }, [
               _c("div", { staticClass: "content" }, [
-                _c("h4", [_vm._v("Tristique senectus et netus et. ")]),
+                _c("h4", [_vm._v("City Info & Culuture")]),
                 _vm._v(" "),
-                _c("p", [
-                  _vm._v(
-                    "Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam."
-                  )
-                ]),
+                _c("p", [_vm._v("blah blah blah ")]),
                 _vm._v(" "),
                 _c("p", [
                   _c("a", { attrs: { href: "#" } }, [_vm._v("Learn more")])
@@ -90322,13 +90198,9 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "card-content" }, [
               _c("div", { staticClass: "content" }, [
-                _c("h4", [_vm._v("Tempor orci dapibus ultrices in.")]),
+                _c("h4", [_vm._v("City Food")]),
                 _vm._v(" "),
-                _c("p", [
-                  _vm._v(
-                    "Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem\n                            sed risus."
-                  )
-                ]),
+                _c("p", [_vm._v("Food Food Food Food.")]),
                 _vm._v(" "),
                 _c("p", [
                   _c("a", { attrs: { href: "#" } }, [_vm._v("Learn more")])
@@ -90346,13 +90218,9 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "card-content" }, [
               _c("div", { staticClass: "content" }, [
-                _c("h4", [_vm._v(" Leo integer malesuada nunc vel risus. ")]),
+                _c("h4", [_vm._v(" Recommended ")]),
                 _vm._v(" "),
-                _c("p", [
-                  _vm._v(
-                    "Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis."
-                  )
-                ]),
+                _c("p", [_vm._v("This is what we recommand.")]),
                 _vm._v(" "),
                 _c("p", [
                   _c("a", { attrs: { href: "#" } }, [_vm._v("Learn more")])
@@ -90365,14 +90233,12 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "intro column is-8 is-offset-2" }, [
         _c("h2", { staticClass: "title" }, [
-          _vm._v("Perfect for developers or designers!")
+          _vm._v("Perfect Plannig For Visitors and Travellers!")
         ]),
         _c("br"),
         _vm._v(" "),
         _c("p", { staticClass: "subtitle" }, [
-          _vm._v(
-            "Vel fringilla est ullamcorper eget nulla facilisi. Nulla facilisi nullam vehicula ipsum a. Neque egestas congue quisque egestas diam in arcu cursus."
-          )
+          _vm._v("Know more about city, deals and specials.")
         ])
       ]),
       _vm._v(" "),
@@ -90383,7 +90249,7 @@ var staticRenderFns = [
               "article",
               { staticClass: "tile is-child notification is-white" },
               [
-                _c("p", { staticClass: "title" }, [_vm._v("Hello World")]),
+                _c("p", { staticClass: "title" }, [_vm._v("Tourist Info")]),
                 _vm._v(" "),
                 _c("p", { staticClass: "subtitle" }, [_vm._v("What is up?")])
               ]
@@ -90395,7 +90261,9 @@ var staticRenderFns = [
               "article",
               { staticClass: "tile is-child notification is-white" },
               [
-                _c("p", { staticClass: "title" }, [_vm._v("Foo")]),
+                _c("p", { staticClass: "title" }, [
+                  _vm._v("Tech Headquarters")
+                ]),
                 _vm._v(" "),
                 _c("p", { staticClass: "subtitle" }, [_vm._v("Bar")])
               ]
@@ -90407,18 +90275,14 @@ var staticRenderFns = [
               "article",
               { staticClass: "tile is-child notification is-white" },
               [
-                _c("p", { staticClass: "title" }, [_vm._v("Third column")]),
+                _c("p", { staticClass: "title" }, [_vm._v("Schools")]),
                 _vm._v(" "),
                 _c("p", { staticClass: "subtitle" }, [
-                  _vm._v("With some content")
+                  _vm._v("With schools content")
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "content" }, [
-                  _c("p", [
-                    _vm._v(
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis."
-                    )
-                  ])
+                  _c("p", [_vm._v("Lorem ipsum.")])
                 ])
               ]
             )
@@ -90434,7 +90298,7 @@ var staticRenderFns = [
                   { staticClass: "tile is-child notification is-white" },
                   [
                     _c("p", { staticClass: "title" }, [
-                      _vm._v("Vertical tiles")
+                      _vm._v("Transportation")
                     ]),
                     _vm._v(" "),
                     _c("p", { staticClass: "subtitle" }, [_vm._v("Top box")])
@@ -90446,7 +90310,7 @@ var staticRenderFns = [
                   { staticClass: "tile is-child notification is-white" },
                   [
                     _c("p", { staticClass: "title" }, [
-                      _vm._v("Vertical tiles")
+                      _vm._v("Shopping Places")
                     ]),
                     _vm._v(" "),
                     _c("p", { staticClass: "subtitle" }, [_vm._v("Bottom box")])
@@ -90459,7 +90323,7 @@ var staticRenderFns = [
                   "article",
                   { staticClass: "tile is-child notification is-white" },
                   [
-                    _c("p", { staticClass: "title" }, [_vm._v("Middle box")]),
+                    _c("p", { staticClass: "title" }, [_vm._v("City View")]),
                     _vm._v(" "),
                     _c("p", { staticClass: "subtitle" }, [
                       _vm._v("With an image")
@@ -90483,18 +90347,16 @@ var staticRenderFns = [
                 "article",
                 { staticClass: "tile is-child notification is-white" },
                 [
-                  _c("p", { staticClass: "title" }, [_vm._v("Wide column")]),
+                  _c("p", { staticClass: "title" }, [
+                    _vm._v("Safe Neighbourhood")
+                  ]),
                   _vm._v(" "),
                   _c("p", { staticClass: "subtitle" }, [
                     _vm._v("Aligned with the right column")
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "content" }, [
-                    _c("p", [
-                      _vm._v(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis."
-                      )
-                    ])
+                    _c("p", [_vm._v("Lorem ipsum dolor.")])
                   ])
                 ]
               )
@@ -90507,7 +90369,7 @@ var staticRenderFns = [
               { staticClass: "tile is-child notification is-white" },
               [
                 _c("div", { staticClass: "content" }, [
-                  _c("p", { staticClass: "title" }, [_vm._v("Tall column")]),
+                  _c("p", { staticClass: "title" }, [_vm._v("City History")]),
                   _vm._v(" "),
                   _c("p", { staticClass: "subtitle" }, [
                     _vm._v("With even more content")
@@ -90516,19 +90378,13 @@ var staticRenderFns = [
                   _c("div", { staticClass: "content" }, [
                     _c("p", [
                       _vm._v(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula\n                                eleifend, nunc dui porta orci, quis semper odio felis ut quam."
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula\n                              eleifend, nunc dui porta orci, quis semper odio felis ut quam."
                       )
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet\n                                felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor."
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam\n                                ut aliquet lacus, quis faucibus libero. Quisque non semper leo."
+                        "Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet\n                              felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor."
                       )
                     ])
                   ])
@@ -90544,18 +90400,16 @@ var staticRenderFns = [
               "article",
               { staticClass: "tile is-child notification is-white" },
               [
-                _c("p", { staticClass: "title" }, [_vm._v("Side column")]),
+                _c("p", { staticClass: "title" }, [
+                  _vm._v("Useful Information")
+                ]),
                 _vm._v(" "),
                 _c("p", { staticClass: "subtitle" }, [
                   _vm._v("With some content")
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "content" }, [
-                  _c("p", [
-                    _vm._v(
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis."
-                    )
-                  ])
+                  _c("p", [_vm._v("Lorem ipsum dolor sit amet.")])
                 ])
               ]
             )
@@ -90566,64 +90420,14 @@ var staticRenderFns = [
               "article",
               { staticClass: "tile is-child notification is-white" },
               [
-                _c("p", { staticClass: "title" }, [_vm._v("Main column")]),
+                _c("p", { staticClass: "title" }, [_vm._v("Credits")]),
                 _vm._v(" "),
                 _c("p", { staticClass: "subtitle" }, [
                   _vm._v("With some content")
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "content" }, [
-                  _c("p", [
-                    _vm._v(
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis."
-                    )
-                  ])
-                ])
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "tile is-ancestor" }, [
-          _c("div", { staticClass: "tile is-parent is-8 is-shady" }, [
-            _c(
-              "article",
-              { staticClass: "tile is-child notification is-white" },
-              [
-                _c("p", { staticClass: "title" }, [_vm._v("Murphy's law")]),
-                _vm._v(" "),
-                _c("p", { staticClass: "subtitle" }, [
-                  _vm._v("Anything that can go wrong will go wrong")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "content" }, [
-                  _c("p", [
-                    _vm._v(
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis."
-                    )
-                  ])
-                ])
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "tile is-parent is-shady" }, [
-            _c(
-              "article",
-              { staticClass: "tile is-child notification is-white" },
-              [
-                _c("p", { staticClass: "title" }, [_vm._v("Main column")]),
-                _vm._v(" "),
-                _c("p", { staticClass: "subtitle" }, [
-                  _vm._v("With some content")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "content" }, [
-                  _c("p", [
-                    _vm._v(
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis."
-                    )
-                  ])
+                  _c("p", [_vm._v("Lorem ipsum.")])
                 ])
               ]
             )
