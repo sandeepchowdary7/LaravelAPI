@@ -1,15 +1,34 @@
 <template>
   <div class="container">
     <section class="hero is-info is-medium is-bold">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title">
-                    {{ results.city.name }}
-                </h1>
-                <h2 class="subtitle">
-                    {{ results.weather.description }} <br>
-                    <img src="http://openweathermap.org/img/w/01d.png">
-                </h2>
+        <div class="hero-body" style="padding-bottom: 3px; padding-top: 71px;">
+            <div class="columns is-vcentered">
+                <div class="column is-10">
+                    <GmapMap ref="mapRef"
+                        :center="{lat:10, lng:10}"
+                        :zoom="7"
+                        map-type-id="terrain"
+                        style="width: 600px; height: 450px"
+                    >
+                    <GmapMarker
+                        :key="index"
+                        v-for="(m, index) in markers"
+                        :position="m.position"
+                        :clickable="true"
+                        :draggable="true"
+                        @click="center=m.position"
+                    />
+                    </GmapMap>
+                </div>
+                <div class="column">
+                    <h1 class="title">
+                        {{ results.city.name }}
+                    </h1>
+                    <h2 class="subtitle">
+                        {{ results.weather.description }} <br>
+                        <img src="http://openweathermap.org/img/w/01d.png">
+                    </h2>
+                </div>
             </div>
         </div>
     </section>
@@ -191,8 +210,18 @@ import store from '../store.js'
     data() {
       return {
         results: {},
-        city: {}
+        city: {},
+        markers: {}
         }
+    },
+     mounted () {
+    // At this point, the child GmapMap has been mounted, but
+    // its map has not been initialized.
+    // Therefore we need to write mapRef.$mapPromise.then(() => ...)
+
+        this.$refs.mapRef.$mapPromise.then((map) => {
+        map.panTo({lat: this.city.lat, lng: this.city.lon})
+        })
     },
     methods: {
       submit() {

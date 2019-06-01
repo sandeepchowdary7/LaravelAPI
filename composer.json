@@ -13,7 +13,8 @@
         "gmopx/laravel-owm": "^0.1.3",
         "guzzlehttp/guzzle": "~6.0",
         "laravel/framework": "5.8.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "namnv609/php-rest-countries": "^1.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

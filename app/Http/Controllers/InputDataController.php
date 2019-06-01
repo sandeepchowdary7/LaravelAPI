@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\CityData;
 use App\UserSearchData;
 use Illuminate\Http\Request;
 use Gmopx\LaravelOWM\LaravelOWM;
 use Illuminate\Support\Facades\Input;
+use App\Http\Requests\InputDataRequest;
 
 class InputDataController extends Controller
 {
@@ -14,14 +16,10 @@ class InputDataController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index(InputDataRequest $request)
     {
         //Validating the user input data
-        $this->validate ($request,  [
-            'name'  =>  'required',
-            'city'  =>  'required',
-            'email' =>  'required'
-        ]);
+        $validated = $request->validated();
 
         //Saving the user input data
         $userSearchData = new UserSearchData;
@@ -49,6 +47,19 @@ class InputDataController extends Controller
         $rqstStatus = UserSearchData::where('city', $userSearchData->city)->latest()->first();
         $rqstStatus->rqst_status = 'Success';
         $rqstStatus->save();
+
+        //checking requested city details available in citydata table
+        $existedCity = CityData::where('city', $request->city)->first();
+
+        //requested city is not existed before goahead and save the city details
+        if(!$existedCity) {
+            $cityData = new CityData();
+            $cityData->city = $location->city->name;
+            $cityData->country = $location->city->country;
+            $cityData->latitude = $location->city->lat;
+            $cityData->longtitude = $location->city->lon;
+            $cityData->save();
+        }
 
         //return response in json with status and status-code
         return response()->json(['status' => 'success', 'data' => $location], 200);
