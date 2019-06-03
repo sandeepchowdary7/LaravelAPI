@@ -44,4 +44,10 @@ return [
         ],
     ],
 
+    'triposo' => [
+        'account' => 'XX6LUHN0',
+        'token' => '6luhn0k0fhlou5m4h52poe8c0fjpejzw'
+    ]
+    
+
 ];

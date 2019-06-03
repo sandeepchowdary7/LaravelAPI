@@ -46,8 +46,8 @@
                     </div>
                     <div class="card-content">
                         <div class="content">
-                            <h4>City Info & Culuture</h4>
-                            <p>blah blah blah </p>
+                            <h4>State & Population</h4>
+                            <p>{{ this.city.country }} - {{ this.timezone }} </p>
                             <p><a href="#">Learn more</a></p>
                         </div>
                     </div>
@@ -227,6 +227,7 @@ import store from '../store.js'
       submit() {
        this.results = this.$store.state.users[0];
        this.city = this.results.city;
+       this.timezone = this.results.sun.rise.timezone;
      },
     },
     created() {

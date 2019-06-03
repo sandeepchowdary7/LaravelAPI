@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\CityData;
 use App\UserSearchData;
-use Illuminate\Http\Request;
 use Gmopx\LaravelOWM\LaravelOWM;
 use Illuminate\Support\Facades\Input;
 use App\Http\Requests\InputDataRequest;
@@ -61,8 +60,10 @@ class InputDataController extends Controller
             $cityData->save();
         }
 
+        $getCoordinates = $this->getCoordinates($location);
         //return response in json with status and status-code
         return response()->json(['status' => 'success', 'data' => $location], 200);
+        // return redirect()->action('InputDataController@getCoordinates');
 
         // $country = $location->city->country;
         // $city = $location->city->name;
