@@ -7,6 +7,7 @@ use App\UserSearchData;
 use Gmopx\LaravelOWM\LaravelOWM;
 use Illuminate\Support\Facades\Input;
 use App\Http\Requests\InputDataRequest;
+use Sandeepchowdary7\Laratriposo\Triposo;
 
 class InputDataController extends Controller
 {
@@ -60,7 +61,7 @@ class InputDataController extends Controller
             $cityData->save();
         }
 
-        $getCoordinates = $this->getCoordinates($location);
+        // $getCoordinates = $this->getCoordinates($location);
         //return response in json with status and status-code
         return response()->json(['status' => 'success', 'data' => $location], 200);
         // return redirect()->action('InputDataController@getCoordinates');
@@ -71,11 +72,11 @@ class InputDataController extends Controller
         // $longtitude = $location->city->lon;
     }
     
-    public function getCoordinates(Request $request){
-       $coordinates = json_decode(json_encode($this->index($request)))->original->city;
-        
-       $lat = $coordinates->lat;
-       $lon = $coordinates->lon;
-       return $lat . ' && ' . $lon;
+    public function getCoordinates($location)
+    {
+       $city = new Triposo();
+       $city->getCity($cityName);
+
+       return $city;
     }
 }
