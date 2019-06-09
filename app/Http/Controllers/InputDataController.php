@@ -61,7 +61,8 @@ class InputDataController extends Controller
             $cityData->save();
         }
 
-        // $getCoordinates = $this->getCoordinates($location);
+        // $cityName = $location->city->name;
+        // $getCoordinates = $this->getCoordinates($cityName);
         //return response in json with status and status-code
         return response()->json(['status' => 'success', 'data' => $location], 200);
         // return redirect()->action('InputDataController@getCoordinates');
@@ -72,11 +73,14 @@ class InputDataController extends Controller
         // $longtitude = $location->city->lon;
     }
     
-    public function getCoordinates($location)
+    public function getCityData()
     {
-       $city = new Triposo();
-       $city->getCity($cityName);
+       $cityName = Input::get('city');
+       $cityName = "Atlanta";
 
-       return $city;
+       $city = new Triposo();
+       $data = $city->getCity($cityName);
+    
+       return response()->json(['status' => 'success', 'data' => $data], 200);
     }
 }

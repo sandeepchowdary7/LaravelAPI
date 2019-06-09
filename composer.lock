@@ -1822,16 +1822,16 @@
         },
         {
             "name": "sandeepchowdary7/laratriposo",
-            "version": "V1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sandeepchowdary7/triposo.git",
-                "reference": "6fa7c5a604b9aa01e1425159dc7ed11884f9bb36"
+                "reference": "4f9298f88b494e46dbf2051de5b3dbfca938ebb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sandeepchowdary7/triposo/zipball/6fa7c5a604b9aa01e1425159dc7ed11884f9bb36",
-                "reference": "6fa7c5a604b9aa01e1425159dc7ed11884f9bb36",
+                "url": "https://api.github.com/repos/sandeepchowdary7/triposo/zipball/4f9298f88b494e46dbf2051de5b3dbfca938ebb5",
+                "reference": "4f9298f88b494e46dbf2051de5b3dbfca938ebb5",
                 "shasum": ""
             },
             "require": {
@@ -1874,7 +1874,7 @@
                 "php",
                 "triposo"
             ],
-            "time": "2019-06-08T15:29:27+00:00"
+            "time": "2019-06-08T22:23:14+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
