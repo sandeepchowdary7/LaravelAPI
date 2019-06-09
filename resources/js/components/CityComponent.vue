@@ -46,8 +46,8 @@
                     </div>
                     <div class="card-content">
                         <div class="content">
-                            <h4>State & Population</h4>
-                            <p>{{ this.city.country }} - {{ this.timezone }} </p>
+                            <h2>State & Country</h2>
+                            <p>{{ cityData.data.name }} - {{ cityData.data.country_id }} </p>
                             <p><a href="#">Learn more</a></p>
                         </div>
                     </div>
@@ -91,7 +91,13 @@
                 <div class="tile is-parent is-shady">
                     <article class="tile is-child notification is-white">
                         <p class="title">Tourist Info</p>
-                        <p class="subtitle">What is up?</p>
+                        <ul>   
+                            <li v-for="(item, index) in cityTouristPlaces" :key="index"> 
+                                <a :href="item.owner_url" target="_blank">
+                                    {{ item.caption }}
+                                </a>
+                            </li>
+                        </ul>
                     </article>
                 </div>
                 <div class="tile is-parent is-shady">
@@ -126,9 +132,9 @@
                         <div class="tile is-parent">
                             <article class="tile is-child notification is-white">
                                 <p class="title">City View</p>
-                                <p class="subtitle">With an image</p>
+                                <!-- <p class="subtitle">With an image</p> -->
                                 <figure class="image is-4by3">
-                                    <img src="https://picsum.photos/640/480/?random" alt="Description">
+                                    <img v-bind:src="cityView" v-bind:alt="cityView">
                                 </figure>
                             </article>
                         </div>
@@ -146,13 +152,10 @@
                 <div class="tile is-parent is-shady">
                     <article class="tile is-child notification is-white">
                         <div class="content">
-                            <p class="title">City History</p>
-                            <p class="subtitle">With even more content</p>
+                            <p class="title">{{this.city.name}}</p>
+                            <p class="subtitle">City Known For</p>
                             <div class="content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula
-                                eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
-                                <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet
-                                felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.</p>
+                                <p>{{snippet}}.</p>
                             </div>
                         </div>
                     </article>
@@ -161,10 +164,16 @@
             <div class="tile is-ancestor">
                 <div class="tile is-parent is-shady">
                     <article class="tile is-child notification is-white">
-                        <p class="title">Useful Information</p>
-                        <p class="subtitle">With some content</p>
+                        <p class="title">Useful Links</p>
+                        <!-- <p class="subtitle">With some content</p> -->
                         <div class="content">
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <ul>   
+                                <li v-for="(item, index) in cityLinks" :key="index"> 
+                                   <a :href="item.url" target="_blank" style="color:blue;">
+                                       {{ item.url }}
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </article>
                 </div>
@@ -211,7 +220,12 @@ import store from '../store.js'
       return {
         results: {},
         city: {},
-        markers: {}
+        markers: {},
+        cityData: {},
+        snippet: '',
+        cityView: '',
+        cityLinks: [],
+        cityTouristPlaces: [],
         }
     },
      mounted () {
@@ -228,11 +242,23 @@ import store from '../store.js'
        this.results = this.$store.state.users[0];
        this.city = this.results.city;
        this.timezone = this.results.sun.rise.timezone;
+       this.getCityDetails();
      },
+     getCityDetails() {
+         var self = this;
+         axios.get('/cityData?city='+this.city.name).then(function(response) {
+             self.cityData = response.data;
+             self.snippet = self.cityData.data.snippet;
+             self.cityView = self.cityData.data.images[0].sizes.original.url;
+             self.cityLinks = self.cityData.data.attribution;
+             self.cityTouristPlaces = self.cityData.data.images;
+         })
+     }
     },
     created() {
       this.submit();
-    }
+    },
+
   }
 </script>
 

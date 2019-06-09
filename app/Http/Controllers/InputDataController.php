@@ -61,22 +61,16 @@ class InputDataController extends Controller
             $cityData->save();
         }
 
-        // $cityName = $location->city->name;
-        // $getCoordinates = $this->getCoordinates($cityName);
         //return response in json with status and status-code
         return response()->json(['status' => 'success', 'data' => $location], 200);
-        // return redirect()->action('InputDataController@getCoordinates');
-
-        // $country = $location->city->country;
-        // $city = $location->city->name;
-        // $latitude = $location->city->lat;
-        // $longtitude = $location->city->lon;
     }
     
     public function getCityData()
     {
        $cityName = Input::get('city');
-       $cityName = "Atlanta";
+
+       if(empty($cityName))
+        return "No data found for this city" . $cityName;
 
        $city = new Triposo();
        $data = $city->getCity($cityName);
