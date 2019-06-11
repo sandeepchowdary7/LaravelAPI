@@ -26,3 +26,4 @@ Route::get('/example', function () {
 Route::post('/input', 'InputDataController@index')->name('input');
 Route::get('/city', 'InputDataController@index');
 Route::get('/cityData', 'InputDataController@getCityData')->name('cityData');
+Route::get('/cityFood', 'InputDataController@getCityFood')->name('cityFood');

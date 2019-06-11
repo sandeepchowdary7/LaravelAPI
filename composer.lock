@@ -1165,16 +1165,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.19.1",
+            "version": "2.19.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "5cf102d1476fdf92f1f991bd1a1a0d93c65755ca"
+                "reference": "adcad3f3af52d0ad4ad7b05f43aa58243b6ca67b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/5cf102d1476fdf92f1f991bd1a1a0d93c65755ca",
-                "reference": "5cf102d1476fdf92f1f991bd1a1a0d93c65755ca",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/adcad3f3af52d0ad4ad7b05f43aa58243b6ca67b",
+                "reference": "adcad3f3af52d0ad4ad7b05f43aa58243b6ca67b",
                 "shasum": ""
             },
             "require": {
@@ -1221,7 +1221,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-06-04T20:07:46+00:00"
+            "time": "2019-06-07T09:56:45+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -1822,16 +1822,16 @@
         },
         {
             "name": "sandeepchowdary7/laratriposo",
-            "version": "v1.0.2",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sandeepchowdary7/triposo.git",
-                "reference": "4f9298f88b494e46dbf2051de5b3dbfca938ebb5"
+                "reference": "3287f6561db415a081a43d5b06d31dc92ab88e08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sandeepchowdary7/triposo/zipball/4f9298f88b494e46dbf2051de5b3dbfca938ebb5",
-                "reference": "4f9298f88b494e46dbf2051de5b3dbfca938ebb5",
+                "url": "https://api.github.com/repos/sandeepchowdary7/triposo/zipball/3287f6561db415a081a43d5b06d31dc92ab88e08",
+                "reference": "3287f6561db415a081a43d5b06d31dc92ab88e08",
                 "shasum": ""
             },
             "require": {
@@ -1874,7 +1874,7 @@
                 "php",
                 "triposo"
             ],
-            "time": "2019-06-08T22:23:14+00:00"
+            "time": "2019-06-11T05:42:17+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

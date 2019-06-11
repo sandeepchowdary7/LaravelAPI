@@ -77,4 +77,18 @@ class InputDataController extends Controller
     
        return response()->json(['status' => 'success', 'data' => $data], 200);
     }
+
+    public function getCityFood()
+    {
+       $cityName = Input::get('city');
+       $cityName = "Khammam";
+
+       if(empty($cityName))
+        return "No data found for this city" . $cityName;
+
+       $city = new Triposo();
+       $data = $city->getCityFood($cityName);
+    
+       return response()->json(['status' => 'success', 'data' => $data], 200);
+    }
 }
