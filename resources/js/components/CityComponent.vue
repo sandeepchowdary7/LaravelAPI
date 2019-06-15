@@ -47,7 +47,7 @@
                     <div class="card-content">
                         <div class="content">
                             <h2>State & Country</h2>
-                            <p>{{ cityData.data.name }} - {{ cityData.data.country_id }} </p>
+                            <p>{{ city.name }} - {{ countryName }} </p>
                             <p><a href="#">Learn more</a></p>
                         </div>
                     </div>
@@ -102,8 +102,14 @@
                 </div>
                 <div class="tile is-parent is-shady">
                     <article class="tile is-child notification is-white">
-                        <p class="title">Tech Headquarters</p>
-                        <p class="subtitle">Bar</p>
+                        <p class="title">City Food</p>
+                        <ul>   
+                            <li v-for="(item, index) in cityFoods" :key="index"> 
+                                <a :href="item.name" target="_blank" :title="item.intro">
+                                    {{ item.name }}
+                                </a>
+                            </li>
+                        </ul>
                     </article>
                 </div>
                 <div class="tile is-parent is-shady">
@@ -152,7 +158,7 @@
                 <div class="tile is-parent is-shady">
                     <article class="tile is-child notification is-white">
                         <div class="content">
-                            <p class="title">{{this.city.name}}</p>
+                            <p class="title">{{city.name}}</p>
                             <p class="subtitle">City Known For</p>
                             <div class="content">
                                 <p>{{snippet}}.</p>
@@ -226,13 +232,11 @@ import store from '../store.js'
         cityView: '',
         cityLinks: [],
         cityTouristPlaces: [],
+        cityFoods: [],
+        countryName: '',
         }
     },
-     mounted () {
-    // At this point, the child GmapMap has been mounted, but
-    // its map has not been initialized.
-    // Therefore we need to write mapRef.$mapPromise.then(() => ...)
-
+    mounted () {
         this.$refs.mapRef.$mapPromise.then((map) => {
         map.panTo({lat: this.city.lat, lng: this.city.lon})
         })
@@ -243,22 +247,31 @@ import store from '../store.js'
        this.city = this.results.city;
        this.timezone = this.results.sun.rise.timezone;
        this.getCityDetails();
+       this.getCityFood();
      },
      getCityDetails() {
          var self = this;
-         axios.get('/cityData?city='+this.city.name).then(function(response) {
-             self.cityData = response.data;
-             self.snippet = self.cityData.data.snippet;
-             self.cityView = self.cityData.data.images[0].sizes.original.url;
-             self.cityLinks = self.cityData.data.attribution;
-             self.cityTouristPlaces = self.cityData.data.images;
+         var cityName = self.city.name
+         axios.get('/cityData?city='+cityName).then(function(response) {
+            self.cityData = response.data;
+            self.countryName = self.cityData.data.country_id;
+            self.snippet = self.cityData.data.snippet;
+            self.cityView = self.cityData.data.images[0].sizes.original.url;
+            self.cityLinks = self.cityData.data.attribution;
+            self.cityTouristPlaces = self.cityData.data.images;
+         })
+     },
+     getCityFood() {
+         var self = this;
+         var cityName = self.city.name
+         axios.get('/cityFood?city='+cityName).then(function(response) {
+            self.cityFoods = response.data.data;
          })
      }
     },
     created() {
       this.submit();
     },
-
   }
 </script>
 

@@ -81,7 +81,6 @@ class InputDataController extends Controller
     public function getCityFood()
     {
        $cityName = Input::get('city');
-       $cityName = "Khammam";
 
        if(empty($cityName))
         return "No data found for this city" . $cityName;
