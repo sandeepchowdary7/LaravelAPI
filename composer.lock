@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ebb6d3aea67a8ddf46a882c1b6a5459f",
+    "content-hash": "5fe9d6fa078eba32944d0aa27cd3d33a",
     "packages": [
         {
             "name": "cmfcmf/openweathermap-php-api",
@@ -1826,16 +1826,16 @@
         },
         {
             "name": "sandeepchowdary7/laraeventful",
-            "version": "dev-master",
+            "version": "V1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sandeepchowdary7/eventful.git",
-                "reference": "ea32f6e081e9aa0ec203d6b8abf07a77230e02d0"
+                "reference": "d25d5e220ba7c9578ebc68f204a953dfb0792bcc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sandeepchowdary7/eventful/zipball/ea32f6e081e9aa0ec203d6b8abf07a77230e02d0",
-                "reference": "ea32f6e081e9aa0ec203d6b8abf07a77230e02d0",
+                "url": "https://api.github.com/repos/sandeepchowdary7/eventful/zipball/d25d5e220ba7c9578ebc68f204a953dfb0792bcc",
+                "reference": "d25d5e220ba7c9578ebc68f204a953dfb0792bcc",
                 "shasum": ""
             },
             "require": {
@@ -1878,7 +1878,7 @@
                 "laravel",
                 "php"
             ],
-            "time": "2019-07-07T04:56:56+00:00"
+            "time": "2019-07-10T03:58:48+00:00"
         },
         {
             "name": "sandeepchowdary7/laratriposo",
@@ -5175,9 +5175,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "sandeepchowdary7/laraeventful": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

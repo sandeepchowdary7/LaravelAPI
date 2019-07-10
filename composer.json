@@ -15,7 +15,7 @@
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
         "namnv609/php-rest-countries": "^1.0",
-        "sandeepchowdary7/laraeventful": "dev-master",
+        "sandeepchowdary7/laraeventful": "1.1.0",
         "sandeepchowdary7/laratriposo": "^2.0"
     },
     "require-dev": {

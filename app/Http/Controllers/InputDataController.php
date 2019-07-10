@@ -8,6 +8,7 @@ use Gmopx\LaravelOWM\LaravelOWM;
 use Illuminate\Support\Facades\Input;
 use App\Http\Requests\InputDataRequest;
 use Sandeepchowdary7\Laratriposo\Triposo;
+use Sandeepchowdary7\Laraeventful\Eventful;
 
 class InputDataController extends Controller
 {
@@ -88,6 +89,19 @@ class InputDataController extends Controller
        $city = new Triposo();
        $data = $city->getCityFood($cityName);
     
+       return response()->json(['status' => 'success', 'data' => $data], 200);
+    }
+
+    public function getEvents()
+    {
+       $cityName = Input::get('city');
+       
+       if(empty($cityName))
+        return "No data found for this city" . $cityName;
+
+       $event = new Eventful();
+       $data = $event->getCityEvents($cityName);
+
        return response()->json(['status' => 'success', 'data' => $data], 200);
     }
 }
