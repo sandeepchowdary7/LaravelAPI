@@ -21,27 +21,15 @@
         Blog
       </a>
 
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About Us
-          </a>
-          <a class="navbar-item">
-            Github
-          </a>
-          <a class="navbar-item">
-            Linkedin  
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Contact
-          </a>
-        </div>
-      </div>
+      <a class="navbar-item">
+      Github
+      </a>      
+      <a class="navbar-item">
+      Linkedin
+      </a>      
+      <a class="navbar-item">
+      Contact
+      </a>
     </div>
 
     <div class="navbar-end">
