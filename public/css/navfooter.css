@@ -6,9 +6,11 @@
   } */
   body {
     background-color: #778899;
+    background-image: linear-gradient(135deg, rgb(246, 137, 24) 0%, rgb(246, 137, 24) 31%,rgb(174, 62, 159) 31%, rgb(174, 62, 159) 42%,rgb(210, 100, 92) 42%, rgb(210, 100, 92) 49%,rgb(138, 25, 227) 49%, rgb(138, 25, 227) 100%);
   }
   .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body, .hero.is-halfheight .hero-body {
     background-color: #F0F8FF;
+    background-image: linear-gradient(135deg, rgb(246, 137, 24) 0%, rgb(246, 137, 24) 31%,rgb(174, 62, 159) 31%, rgb(174, 62, 159) 42%,rgb(210, 100, 92) 42%, rgb(210, 100, 92) 49%,rgb(138, 25, 227) 49%, rgb(138, 25, 227) 100%);
   }
   /* .footer {
     position: initial;
@@ -22,6 +24,7 @@
     bottom: 0;
     width: 100%;
     background-color: #ADD8E6;
+    background-image: linear-gradient(135deg, rgb(191, 152, 26) 0%,rgb(216, 90, 24) 100%);
     padding-bottom: 25px;
     text-align: center;
   }
@@ -31,6 +34,7 @@
   bottom: 1050px;
   overflow: hidden;
   background-color: #ADD8E6;
+  background-image: linear-gradient(135deg, rgb(191, 152, 26) 0%,rgb(216, 90, 24) 100%);
   height: 80px;
   width: 100%;
 }
