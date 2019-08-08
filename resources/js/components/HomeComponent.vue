@@ -4,9 +4,9 @@
         <div class="hero-body is-12">
             <div class="container is-12 has-text-centered">
                 <div class="column is-8 is-offset-2">
-                    <h3 class="title has-text-grey">Welcome</h3>
-                    <p class="subtitle has-text-grey">Please Enter the details to proceed.</p>
-                    <div class="box">
+                    <h3 class="title has-text-white">Welcome</h3>
+                    <p class="subtitle has-text-white">Please Enter the details to proceed.</p>
+                    <div class="box" style="background-image: repeating-linear-gradient(90deg, hsl(138,66%,68%, 0.52) 0px, hsl(138,66%,68%, 0.52) 124px,hsl(183,66%,68%, 0.52) 124px, hsl(183,66%,68%, 0.52) 248px,hsl(228,66%,68%, 0.52) 248px, hsl(228,66%,68%, 0.52) 372px,hsl(273,66%,68%, 0.52) 372px, hsl(273,66%,68%, 0.52) 496px,hsl(318,66%,68%, 0.52) 496px, hsl(318,66%,68%, 0.52) 620px,hsl(3,66%,68%, 0.52) 620px, hsl(3,66%,68%, 0.52) 744px,hsl(48,66%,68%, 0.52) 744px, hsl(48,66%,68%, 0.52) 868px,hsl(93,66%,68%, 0.52) 868px, hsl(93,66%,68%, 0.52) 992px),repeating-linear-gradient(45deg, hsl(98,76%,58%, 0.37) 0px, hsl(98,76%,58%, 0.37) 56px,hsl(143,76%,58%, 0.37) 56px, hsl(143,76%,58%, 0.37) 112px,hsl(188,76%,58%, 0.37) 112px, hsl(188,76%,58%, 0.37) 168px,hsl(233,76%,58%, 0.37) 168px, hsl(233,76%,58%, 0.37) 224px,hsl(278,76%,58%, 0.37) 224px, hsl(278,76%,58%, 0.37) 280px,hsl(323,76%,58%, 0.37) 280px, hsl(323,76%,58%, 0.37) 336px,hsl(8,76%,58%, 0.37) 336px, hsl(8,76%,58%, 0.37) 392px,hsl(53,76%,58%, 0.37) 392px, hsl(53,76%,58%, 0.37) 448px),repeating-linear-gradient(135deg, #b461e7,#c679ff,#c7e3ab,#c3b8e1 3px);">
                         <figure class="avatar">
                             <!-- <img src="../../../public/images/php-pool.png" style="width:100px;height:80px;"> -->
                         </figure>
@@ -38,7 +38,7 @@
                              </div>
                         </form>
                     </div>
-                    <p class="has-text-grey">
+                    <p class="has-text-white">
                         <a href="#">Need Help?</a>
                     </p>
                 </div>

@@ -21693,7 +21693,7 @@ var VBTooltip = {
 /*!*************************************************!*\
   !*** ./node_modules/bootstrap-vue/esm/index.js ***!
   \*************************************************/
-/*! exports provided: BVConfigPlugin, BVConfig, BootstrapVue, install, setConfig, default, componentsPlugin, BVModalPlugin, BVToastPlugin, AlertPlugin, BAlert, BadgePlugin, BBadge, BreadcrumbPlugin, BBreadcrumb, BBreadcrumbItem, ButtonPlugin, BButton, BButtonClose, ButtonGroupPlugin, BButtonGroup, ButtonToolbarPlugin, BButtonToolbar, CardPlugin, BCard, BCardBody, BCardFooter, BCardGroup, BCardHeader, BCardImg, BCardImgLazy, BCardSubTitle, BCardText, BCardTitle, CarouselPlugin, BCarousel, BCarouselSlide, CollapsePlugin, BCollapse, DropdownPlugin, BDropdown, BDropdownItem, BDropdownItemButton, BDropdownDivider, BDropdownForm, BDropdownGroup, BDropdownHeader, BDropdownText, EmbedPlugin, BEmbed, FormPlugin, BForm, BFormDatalist, BFormText, BFormInvalidFeedback, BFormValidFeedback, FormCheckboxPlugin, BFormCheckbox, BFormCheckboxGroup, FormFilePlugin, BFormFile, FormGroupPlugin, BFormGroup, FormInputPlugin, BFormInput, FormRadioPlugin, BFormRadio, BFormRadioGroup, FormSelectPlugin, BFormSelect, FormTextareaPlugin, BFormTextarea, ImagePlugin, BImg, BImgLazy, InputGroupPlugin, BInputGroup, BInputGroupAddon, BInputGroupAppend, BInputGroupPrepend, BInputGroupText, JumbotronPlugin, BJumbotron, LayoutPlugin, BContainer, BRow, BCol, BFormRow, LinkPlugin, BLink, ListGroupPlugin, BListGroup, BListGroupItem, MediaPlugin, BMedia, BMediaAside, BMediaBody, ModalPlugin, BModal, NavPlugin, BNav, BNavForm, BNavItem, BNavItemDropdown, BNavText, NavbarPlugin, BNavbar, BNavbarBrand, BNavbarNav, BNavbarToggle, PaginationPlugin, BPagination, PaginationNavPlugin, BPaginationNav, PopoverPlugin, BPopover, ProgressPlugin, BProgress, BProgressBar, SpinnerPlugin, BSpinner, TablePlugin, BTable, BTableLite, TabsPlugin, BTabs, BTab, ToastPlugin, BToast, BToaster, TooltipPlugin, BTooltip, directivesPlugin, VBModalPlugin, VBModal, VBPopoverPlugin, VBPopover, VBScrollspyPlugin, VBScrollspy, VBTogglePlugin, VBToggle, VBTooltipPlugin, VBTooltip */
+/*! exports provided: componentsPlugin, BVModalPlugin, BVToastPlugin, AlertPlugin, BAlert, BadgePlugin, BBadge, BreadcrumbPlugin, BBreadcrumb, BBreadcrumbItem, ButtonPlugin, BButton, BButtonClose, ButtonGroupPlugin, BButtonGroup, ButtonToolbarPlugin, BButtonToolbar, CardPlugin, BCard, BCardBody, BCardFooter, BCardGroup, BCardHeader, BCardImg, BCardImgLazy, BCardSubTitle, BCardText, BCardTitle, CarouselPlugin, BCarousel, BCarouselSlide, CollapsePlugin, BCollapse, DropdownPlugin, BDropdown, BDropdownItem, BDropdownItemButton, BDropdownDivider, BDropdownForm, BDropdownGroup, BDropdownHeader, BDropdownText, EmbedPlugin, BEmbed, FormPlugin, BForm, BFormDatalist, BFormText, BFormInvalidFeedback, BFormValidFeedback, FormCheckboxPlugin, BFormCheckbox, BFormCheckboxGroup, FormFilePlugin, BFormFile, FormGroupPlugin, BFormGroup, FormInputPlugin, BFormInput, FormRadioPlugin, BFormRadio, BFormRadioGroup, FormSelectPlugin, BFormSelect, FormTextareaPlugin, BFormTextarea, ImagePlugin, BImg, BImgLazy, InputGroupPlugin, BInputGroup, BInputGroupAddon, BInputGroupAppend, BInputGroupPrepend, BInputGroupText, JumbotronPlugin, BJumbotron, LayoutPlugin, BContainer, BRow, BCol, BFormRow, LinkPlugin, BLink, ListGroupPlugin, BListGroup, BListGroupItem, MediaPlugin, BMedia, BMediaAside, BMediaBody, ModalPlugin, BModal, NavPlugin, BNav, BNavForm, BNavItem, BNavItemDropdown, BNavText, NavbarPlugin, BNavbar, BNavbarBrand, BNavbarNav, BNavbarToggle, PaginationPlugin, BPagination, PaginationNavPlugin, BPaginationNav, PopoverPlugin, BPopover, ProgressPlugin, BProgress, BProgressBar, SpinnerPlugin, BSpinner, TablePlugin, BTable, BTableLite, TabsPlugin, BTabs, BTab, ToastPlugin, BToast, BToaster, TooltipPlugin, BTooltip, directivesPlugin, VBModalPlugin, VBModal, VBPopoverPlugin, VBPopover, VBScrollspyPlugin, VBScrollspy, VBTogglePlugin, VBToggle, VBTooltipPlugin, VBTooltip, BVConfigPlugin, BVConfig, BootstrapVue, install, setConfig, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -89437,145 +89437,167 @@ var render = function() {
       _c("div", { staticClass: "hero-body is-12" }, [
         _c("div", { staticClass: "container is-12 has-text-centered" }, [
           _c("div", { staticClass: "column is-8 is-offset-2" }, [
-            _c("h3", { staticClass: "title has-text-grey" }, [
+            _c("h3", { staticClass: "title has-text-white" }, [
               _vm._v("Welcome")
             ]),
             _vm._v(" "),
-            _c("p", { staticClass: "subtitle has-text-grey" }, [
+            _c("p", { staticClass: "subtitle has-text-white" }, [
               _vm._v("Please Enter the details to proceed.")
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "box" }, [
-              _c("figure", { staticClass: "avatar" }),
-              _vm._v(" "),
-              _vm.show
-                ? _c(
-                    "form",
-                    {
-                      on: {
-                        submit: function($event) {
-                          $event.preventDefault()
-                          return _vm.submit($event)
+            _c(
+              "div",
+              {
+                staticClass: "box",
+                staticStyle: {
+                  "background-image":
+                    "repeating-linear-gradient(90deg, hsl(138,66%,68%, 0.52) 0px, hsl(138,66%,68%, 0.52) 124px,hsl(183,66%,68%, 0.52) 124px, hsl(183,66%,68%, 0.52) 248px,hsl(228,66%,68%, 0.52) 248px, hsl(228,66%,68%, 0.52) 372px,hsl(273,66%,68%, 0.52) 372px, hsl(273,66%,68%, 0.52) 496px,hsl(318,66%,68%, 0.52) 496px, hsl(318,66%,68%, 0.52) 620px,hsl(3,66%,68%, 0.52) 620px, hsl(3,66%,68%, 0.52) 744px,hsl(48,66%,68%, 0.52) 744px, hsl(48,66%,68%, 0.52) 868px,hsl(93,66%,68%, 0.52) 868px, hsl(93,66%,68%, 0.52) 992px),repeating-linear-gradient(45deg, hsl(98,76%,58%, 0.37) 0px, hsl(98,76%,58%, 0.37) 56px,hsl(143,76%,58%, 0.37) 56px, hsl(143,76%,58%, 0.37) 112px,hsl(188,76%,58%, 0.37) 112px, hsl(188,76%,58%, 0.37) 168px,hsl(233,76%,58%, 0.37) 168px, hsl(233,76%,58%, 0.37) 224px,hsl(278,76%,58%, 0.37) 224px, hsl(278,76%,58%, 0.37) 280px,hsl(323,76%,58%, 0.37) 280px, hsl(323,76%,58%, 0.37) 336px,hsl(8,76%,58%, 0.37) 336px, hsl(8,76%,58%, 0.37) 392px,hsl(53,76%,58%, 0.37) 392px, hsl(53,76%,58%, 0.37) 448px),repeating-linear-gradient(135deg, #b461e7,#c679ff,#c7e3ab,#c3b8e1 3px)"
+                }
+              },
+              [
+                _c("figure", { staticClass: "avatar" }),
+                _vm._v(" "),
+                _vm.show
+                  ? _c(
+                      "form",
+                      {
+                        on: {
+                          submit: function($event) {
+                            $event.preventDefault()
+                            return _vm.submit($event)
+                          }
                         }
-                      }
-                    },
-                    [
-                      _c("div", { staticClass: "field" }, [
-                        _c("div", { staticClass: "control" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.city,
-                                expression: "form.city"
-                              }
-                            ],
-                            staticClass: "input required is-large",
-                            attrs: {
-                              type: "text",
-                              placeholder: "City Name",
-                              value: "",
-                              autofocus: ""
-                            },
-                            domProps: { value: _vm.form.city },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
+                      },
+                      [
+                        _c("div", { staticClass: "field" }, [
+                          _c("div", { staticClass: "control" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.city,
+                                  expression: "form.city"
                                 }
-                                _vm.$set(_vm.form, "city", $event.target.value)
-                              }
-                            }
-                          })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "field" }, [
-                        _c("div", { staticClass: "control" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.name,
-                                expression: "form.name"
-                              }
-                            ],
-                            staticClass: "input is-large",
-                            attrs: { type: "text", placeholder: "Your Name" },
-                            domProps: { value: _vm.form.name },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
+                              ],
+                              staticClass: "input required is-large",
+                              attrs: {
+                                type: "text",
+                                placeholder: "City Name",
+                                value: "",
+                                autofocus: ""
+                              },
+                              domProps: { value: _vm.form.city },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "city",
+                                    $event.target.value
+                                  )
                                 }
-                                _vm.$set(_vm.form, "name", $event.target.value)
                               }
-                            }
-                          })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "field" }, [
-                        _c("div", { staticClass: "control" }, [
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.form.email,
-                                expression: "form.email"
-                              }
-                            ],
-                            staticClass: "input is-large",
-                            attrs: {
-                              type: "email",
-                              placeholder: "Your Email",
-                              value: ""
-                            },
-                            domProps: { value: _vm.form.email },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.$set(_vm.form, "email", $event.target.value)
-                              }
-                            }
-                          })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "field is-grouped" }, [
-                        _c("input", {
-                          staticClass:
-                            "button is-block is-info is-large is-fullwidth",
-                          attrs: { type: "submit", value: "Submit" },
-                          on: {
-                            click: function($event) {
-                              $event.stopPropagation()
-                              $event.preventDefault()
-                              return _vm.submit()
-                            }
-                          }
-                        }),
+                            })
+                          ])
+                        ]),
                         _vm._v(" "),
-                        _c("input", {
-                          staticClass:
-                            "button is-block is-large is-fullwidth is-danger",
-                          attrs: { type: "button", value: "Cancel" },
-                          on: {
-                            click: function($event) {
-                              return _vm.resetForm()
+                        _c("div", { staticClass: "field" }, [
+                          _c("div", { staticClass: "control" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.name,
+                                  expression: "form.name"
+                                }
+                              ],
+                              staticClass: "input is-large",
+                              attrs: { type: "text", placeholder: "Your Name" },
+                              domProps: { value: _vm.form.name },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "name",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "field" }, [
+                          _c("div", { staticClass: "control" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.email,
+                                  expression: "form.email"
+                                }
+                              ],
+                              staticClass: "input is-large",
+                              attrs: {
+                                type: "email",
+                                placeholder: "Your Email",
+                                value: ""
+                              },
+                              domProps: { value: _vm.form.email },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "email",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "field is-grouped" }, [
+                          _c("input", {
+                            staticClass:
+                              "button is-block is-info is-large is-fullwidth",
+                            attrs: { type: "submit", value: "Submit" },
+                            on: {
+                              click: function($event) {
+                                $event.stopPropagation()
+                                $event.preventDefault()
+                                return _vm.submit()
+                              }
                             }
-                          }
-                        })
-                      ])
-                    ]
-                  )
-                : _vm._e()
-            ]),
+                          }),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass:
+                              "button is-block is-large is-fullwidth is-danger",
+                            attrs: { type: "button", value: "Cancel" },
+                            on: {
+                              click: function($event) {
+                                return _vm.resetForm()
+                              }
+                            }
+                          })
+                        ])
+                      ]
+                    )
+                  : _vm._e()
+              ]
+            ),
             _vm._v(" "),
             _vm._m(0)
           ])
@@ -89589,7 +89611,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("p", { staticClass: "has-text-grey" }, [
+    return _c("p", { staticClass: "has-text-white" }, [
       _c("a", { attrs: { href: "#" } }, [_vm._v("Need Help?")])
     ])
   }

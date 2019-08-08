@@ -52,7 +52,7 @@ class InputDataController extends Controller
         //checking requested city details available in citydata table
         $existedCity = CityData::where('city', $request->city)->first();
 
-        //requested city is not existed before goahead and save the city details
+        //requested city is not existed before go ahead and save the city details
         if(!$existedCity) {
             $cityData = new CityData();
             $cityData->city = $location->city->name;
