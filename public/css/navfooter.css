@@ -27,6 +27,7 @@
     background-image: linear-gradient(135deg, rgb(191, 152, 26) 0%,rgb(216, 90, 24) 100%);
     padding-bottom: 25px;
     text-align: center;
+    padding: 17px;
   }
 
   /* Style the navbar */

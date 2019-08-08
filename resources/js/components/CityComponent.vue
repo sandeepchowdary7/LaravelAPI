@@ -171,8 +171,7 @@
                 <div class="tile is-parent is-shady">
                     <article class="tile is-child notification is-white">
                         <p class="title">Useful Links</p>
-                        <!-- <p class="subtitle">With some content</p> -->
-                        <div class="content">
+                        <p class="subtitle" style="font-size:small;">
                             <ul>   
                                 <li v-for="(item, index) in cityLinks" :key="index"> 
                                    <a :href="item.url" target="_blank" style="color:blue;">
@@ -180,16 +179,16 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </p>
                     </article>
                 </div>
                 <div class="tile is-parent is-8 is-shady">
                     <article class="tile is-child notification is-white">
                         <p class="title">Credits</p>
-                        <p class="subtitle">With some content</p>
-                        <div class="content">
+                        <p class="subtitle"><a href="http://php-pool.review" target="_blank" style="color:red;">php-pool.review</a></p>
+                        <!-- <div class="content">
                             <p>Lorem ipsum.</p>
-                        </div>
+                        </div> -->
                     </article>
                 </div>
             </div>
