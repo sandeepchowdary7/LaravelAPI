@@ -2,13 +2,13 @@
   <div class="container">
     <section class="hero is-info is-medium is-bold">
         <div class="hero-body" style="padding-bottom: 3px; padding-top: 71px;">
-            <div class="columns is-vcentered">
-                <div class="column is-10">
+            <div class="columns is-vcentered" style="padding-top: 10px;">
+                <div class="column is-6">
                     <GmapMap ref="mapRef"
                         :center="{lat:10, lng:10}"
                         :zoom="7"
                         map-type-id="terrain"
-                        style="width: 600px; height: 450px"
+                        style="width: 750px; height: 450px"
                     >
                     <GmapMarker
                         :key="index"
@@ -20,14 +20,14 @@
                     />
                     </GmapMap>
                 </div>
-                <div class="column">
-                    <h1 class="title">
-                        {{ results.city.name }}
-                    </h1>
-                    <h2 class="subtitle">
+                <div class="column is-4">
+                    <h1 class="title" style="padding-left: 220px; margin-bottom: 220px;">
+                        <!-- {{ results.city.name }} -->
+                    <!-- </h1>
+                    <h1 class="subtitle"> -->
                         {{ results.weather.description }} <br>
-                        <img src="http://openweathermap.org/img/w/01d.png">
-                    </h2>
+                        <img src="http://openweathermap.org/img/wn/10d@2x.png" height="150" width="150">
+                    </h1>
                 </div>
             </div>
         </div>

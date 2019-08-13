@@ -88950,66 +88950,79 @@ var render = function() {
           staticStyle: { "padding-bottom": "3px", "padding-top": "71px" }
         },
         [
-          _c("div", { staticClass: "columns is-vcentered" }, [
-            _c(
-              "div",
-              { staticClass: "column is-10" },
-              [
+          _c(
+            "div",
+            {
+              staticClass: "columns is-vcentered",
+              staticStyle: { "padding-top": "10px" }
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "column is-6" },
+                [
+                  _c(
+                    "GmapMap",
+                    {
+                      ref: "mapRef",
+                      staticStyle: { width: "750px", height: "450px" },
+                      attrs: {
+                        center: { lat: 10, lng: 10 },
+                        zoom: 7,
+                        "map-type-id": "terrain"
+                      }
+                    },
+                    _vm._l(_vm.markers, function(m, index) {
+                      return _c("GmapMarker", {
+                        key: index,
+                        attrs: {
+                          position: m.position,
+                          clickable: true,
+                          draggable: true
+                        },
+                        on: {
+                          click: function($event) {
+                            _vm.center = m.position
+                          }
+                        }
+                      })
+                    }),
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "column is-4" }, [
                 _c(
-                  "GmapMap",
+                  "h1",
                   {
-                    ref: "mapRef",
-                    staticStyle: { width: "600px", height: "450px" },
-                    attrs: {
-                      center: { lat: 10, lng: 10 },
-                      zoom: 7,
-                      "map-type-id": "terrain"
+                    staticClass: "title",
+                    staticStyle: {
+                      "padding-left": "220px",
+                      "margin-bottom": "220px"
                     }
                   },
-                  _vm._l(_vm.markers, function(m, index) {
-                    return _c("GmapMarker", {
-                      key: index,
+                  [
+                    _vm._v(
+                      "\n                      " +
+                        _vm._s(_vm.results.weather.description) +
+                        " "
+                    ),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("img", {
                       attrs: {
-                        position: m.position,
-                        clickable: true,
-                        draggable: true
-                      },
-                      on: {
-                        click: function($event) {
-                          _vm.center = m.position
-                        }
+                        src: "http://openweathermap.org/img/wn/10d@2x.png",
+                        height: "150",
+                        width: "150"
                       }
                     })
-                  }),
-                  1
+                  ]
                 )
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "column" }, [
-              _c("h1", { staticClass: "title" }, [
-                _vm._v(
-                  "\n                      " +
-                    _vm._s(_vm.results.city.name) +
-                    "\n                  "
-                )
-              ]),
-              _vm._v(" "),
-              _c("h2", { staticClass: "subtitle" }, [
-                _vm._v(
-                  "\n                      " +
-                    _vm._s(_vm.results.weather.description) +
-                    " "
-                ),
-                _c("br"),
-                _vm._v(" "),
-                _c("img", {
-                  attrs: { src: "http://openweathermap.org/img/w/01d.png" }
-                })
               ])
-            ])
-          ])
+            ]
+          )
         ]
       )
     ]),
